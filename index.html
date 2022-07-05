@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <title>T O N</title>
+  <link rel="shortcut icon" href="icons/Ton_ico.ico">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/js.js"></script>
+  
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js'></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+  <script src="http://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="js/jquery.fittext.js"></script>
+  <script src="js/jquery.lettering.js"></script>
+  <script src="js/jquery.textillate.js"></script>
+  <script src='https://assets.codepen.io/16327/gsap-latest-beta.min.js?r=3.10.0'></script>
+  <script src='https://assets.codepen.io/16327/ScrollTrigger.min.js?v=3.10.0'></script>
+  <link rel="stylesheet" href="css/animate.css">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- font-family: 'Roboto', sans-serif; -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+ </head>
+ <body>
+    
+<!-- loading -->
+    <div id="loading" style="overflow:hidden">
+        <div class="loadingDrawing">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 1920 1080" style="enable-background:new 0 0 1920 1080;" xml:space="preserve">
+            <style type="text/css">
+            .st0 {
+                fill:none;
+                stroke:#383838;
+                stroke-width:1.5;
+                stroke-miterlimit:10;
+                stroke-dasharray: 3000;
+                stroke-dashoffset: 3000;
+                animation: dash 2s linear forwards;
+            }
+            @keyframes dash{
+                0% {stroke-dashoffset: 3000;}
+                100% {stroke-dashoffset: 0;}
+            }
+        </style>
+        <g>
+            <path class="st0" d="M822.16,623.22c14.54-2.49,28.54-5.22,43.38-5.96c14.72-0.74,29.47-0.37,44.18,0.31
+            c23.47,1.09,46.81,2.66,70.07,5.86c0,0,56.53,15.25,94.76,1.52c0,0,8.82-7.07-18.03-8.11c0,0-63.17-3.3-77.43,13.84
+            c-0.44,12.22-2.03,24.38-4.4,36.41c-1.17,5.91-3.31,20.64-4.87,26.47c-1.18,4.42-4.99,7.62-4.99,4.57
+            c2.65-24.57,7.21-47.91,14.96-71.65c0,0,3.33-64.03-14.96-105.19c0,0-16.63-32.02,29.93-30.49c0,0,48.21-1.52,48.21,41.16
+            l-1.66,50.31c0,0,0,4.57-9.98,4.57c0,0-54.86,1.52-38.24,9.15c0,0,9.98,4.57,31.59,4.57h54.86c0,0,6.65,0,6.65,6.1
+            c0,0-1.66,56.41,4.99,76.23c0,0,14.96,42.01,0,14.91c0,0-8.31-13.38-11.64-59.12l-1.66-21.34c0,0,0-6.1-6.65-6.1l-44.89-1.52
+            c0,0-11.64,0-4.99-6.1c0,0,3.33-3.05,3.33,3.05c0,0,0,18.29-1.66,39.64l-3.33,70.13v3.05c0,0-1.66,7.62-4.99,1.52
+            c0,0,3.33-56.41,3.33-71.65v-36.59c0,0,0-4.57-11.64-4.57c0,0-21.61,1.52-21.61-12.2c0,0,0-24.39-3.33-38.11
+            c0,0-3.33-16.77-11.64-33.54c0,0-18.29-30.49,16.63-30.49c0,0,49.88-4.57,51.54,32.02v56.41c0,0-3.32,6.1-3.32-4.57l-1.66-47.26
+            c0,0,0-15.25-19.95-19.82c0,0-38.24-9.15-36.58,9.15c0,0,0,4.57,4.99,21.34c0,0,6.65,15.25,3.33,16.77c0,0-3.33,6.1-13.3-35.06
+            c0,0-3.33-16.77,19.95-16.77c0,0,34.91,0,39.9,6.1c0,0,23.28,10.67,36.58-12.2c0,0,14.96-15.25-3.33-65.56
+            c0,0-11.64-22.87-11.64-57.93c0,0,0-7.62,3.33-19.82"/>
+        </g>
+
+        </svg>
+        </div>
+        <h1 class="loadingLogo"><img src="icons/loadingLogo.png" alt="loadingLogo"></h1>
+    </div>
+
+
+
+
+
+<!-- MAIN -->
+
+<header>
+        <ul class="menu">
+            <li class="menu1">ABOUT US</li>
+            <li class="menu2">PRODUCT</li>
+            <li class="menu3">PROJECTS</li>
+            <li class="menu4"><a href="https://www.ton.eu/en/chairs//" target="_blank" rel="noopener">SHOP</a></li>
+        </ul>
+    
+        
+
+</header>
+    
+
+<div class="bottomHeader">
+    <h1 class="logo"><a href="#"><img src="icons/HeaderLogo.png" alt="HeaderLogo"></a></h1>
+    <div class="CenterScRoll">
+        <h2>SCROLL DOWN</h2>
+        <img src="icons/ScrollDown.png" alt="ScRollDown">
+    </div>
+</div>
+
+
+
+<div id="main">
+
+    <!-- <h1 class="scroll_number">0</h1>
+    
+    <div class="guideline_left"></div>
+    <div class="guideline_right"></div> -->
+
+<!-- main 01 -->
+    
+    <section class="main1">
+
+        <div class="videoBOX">
+                <video src="videos/main01.mp4" muted autoplay loop></video>
+        </div>
+              
+        <h1 class="main1_LogoText">TON</h1>
+        <div class="main_textBox">
+            <div class="main1_text">Prior to the start of product</div>
+            <div class="main1_text">development, we first pursue</div> 
+            <div class="main1_text">the aesthetic value of the product</div>
+        </div>
+        
+    
+            <img src="icons/s_c_r_o_LL.png" alt="scroll" class="scroll">
+            <img src="icons/main1Scroll.png" alt="scroll01" class="scroll01">
+            <img src="icons/main1ScrollDown02.png" alt="scroll02" class="scroll02">
+      
+   
+    </section>
+
+    
+
+
+
+<!-- main 02 -->
+    
+    <section class="main2">
+        <article class="aboutTON">
+            <div class="about1">
+                <p class="aboutTON_text1"> TON was established in 1861 and still put<br>
+                    wood into the steel frame by hand <br>
+                    is a company that manufactures <br>
+                    furniture using bent wood</p>
+                <img src="images/man1.png" alt="aboutTON_img1MAN" class="aboutTON_img1MAN">
+                <img src="images/about_chair01.png" alt="chair01" class="chair01IMG">
+            </div>
+            <div class="about2">
+                <video src="videos/aboutTON3.mp4" muted autoplay loop></video>
+            <p class="aboutTON_text2">These days, we're taking this special <br>
+                production technology to the next level,<br>
+                and we're working with contemporary <br>
+                designers Through collaboration, we <br>
+                capture various artistic attempts that <br>
+                can be expressed through wood</p>
+            </div>
+            
+        </article>
+    </section>
+
+    
+
+    <!-- main 03 -->
+    <section class="main3">
+       
+    <!-- history -->
+        <article class="history01">
+                <video src="videos/history01.mp4" loop muted autoplay class="history01BG_video"></video>
+                <h2 class="historyMainText">HISTORY</h2>
+                <img src="images/historyIMG01.PNG" alt="historyIMG01" class="historyIMG01" >
+                <img src="icons/map.png" alt="history_mapIMG" class="history_mapIMG">
+                <img src="icons/map_Display.png" alt="DisplayIcon" id="Display">
+                <p class="historyText01">In 1861, Michael Thonet was the best tree for making bentwood <br>
+                    furniture, a tree with many jade trees</p>
+                <img src="images/historyIMG03.PNG" alt="historyIMG02" class="historyIMG02">
+                <p class="historyText02">Thanks to the environment surrounded by jade trees,<br>
+                    The supply and demand of materials were easy, and the geogra<br>
+                    phical location also reduced labor and transportation costs</p>
+                <img src="images/historyIMG04.PNG" alt="historyIMG03" class="historyIMG03">
+                <p class="historyText03">Since 1912, it has sold more than 445,000 products each year, <br>
+                    with 2,000 employees</p>
+                
+        </article>
+
+
+    <!-- timeLine -->
+        <article class="timeLine" id="timeLine">
+                <h2 class="timeLine_mainText" data-scroll data-scroll-speed="2" data-scroll-delay="0.2">TIMELINE</h2>
+            <div class="external">
+                <div class="horizontal-scroll-wrapper">
+                  <div class="img-wrapper slower">
+                    <a href="#timeLine">
+                        <img src="images/timeline_02.jpg" alt="timeLineIMG01">
+                        <h4 class="timeLine_imgText1">1861</h4>
+                        <p class="timeLine_imgText2">Establishment of Bentwood Furniture Factory in Bystřice pod Hostýnem Area</p>
+                    </a>
+                  </div>
+              
+                  <div class="img-wrapper faster">
+                    <a href="#timeLine" >
+                        <img src="images/timeline_03.jpg" alt="timeLineIMG02">
+                        <h4 class="timeLine_imgText1">1876</h4>
+                        <p class="timeLine_imgText2">the first product to be released</p>
+                    </a>
+                  </div>
+              
+                  <div class="img-wrapper slower vertical">
+                    <a href="#timeLine">
+                        <img src="images/timeline_04.jpg" alt="timeLineIMG03">
+                        <h4 class="timeLine_imgText1">1903</h4>
+                        <p class="timeLine_imgText2">The innovative design has made a big difference in the industry
+                            The original design of the Chair 9 was developed.</p>
+                    </a>
+                  </div>
+              
+                  <div class="img-wrapper slower slower-down">
+                    <a href="#timeLine" >
+                        <img src="images/timeline_05.jpg" alt="timeLineIMG04">
+                        <h4 class="timeLine_imgText1">1924</h4>
+                        <p class="timeLine_imgText2">The ongoing European recession has led to mergers and acquisitions with Kohn-Mundus
+                            Change company name to Thonet-Mundus</p>
+                    </a>
+                  </div>
+              
+                  <div class="img-wrapper">
+                    <a href="#timeLine">
+                        <img src="images/timeline_06.jpg" alt="timeLineIMG05">
+                        <h4 class="timeLine_imgText1">1930</h4>
+                        <p class="timeLine_imgText2">Chair & Armchair 811 launched by Joseph Hoffmann</p>
+                    </a>
+                  </div>
+                  <div class="img-wrapper slower slower2">
+                    <a href="#timeLine">
+                        <img src="images/timeline_09.jpg" alt="timeLineIMG07">
+                        <h4 class="timeLine_imgText1">1994</h4>
+                        <p class="timeLine_imgText2">2003 New logo modeled after iconic Chair 14 design</p>
+                    </a>
+                  </div>
+                  
+                  <div class="img-wrapper">
+                    <a href="#timeLine">
+                        <img src="images/timeline_12.jpg" alt="timeLineIMG08">
+                        <h4 class="timeLine_imgText1">2015</h4>
+                        <p class="timeLine_imgText2">TON is the first in the world to release Split Collection using bent wood in both directions.
+                            Because of this, TON is recognized for its creative design and high-quality manufacturing technology
+                            Win the Red Dot Design Award.</p>
+                    </a>
+                  </div>
+                  
+                </div>
+            </div>
+            
+        </article>
+
+
+    <!-- howMake -->
+        <article class="howMake" >
+            <div class="howMakeIMG">
+                <h2 class="howMake_mainText" data-scroll data-scroll-speed="2" data-scroll-delay="0.2">HOW WE MAKE IT</h2>
+                <img src="images/howMainMan_IMG.png" alt="howMakeMAN" class="howMakeMAN">
+                <img src="images/lightOn.png" alt="lighting" id="lighting">
+                    <div class="play-backdrop"></div>
+                    <div class="play-button">
+                        <svg class="play-circles" viewBox="0 0 152 152">
+                            <circle class="play-circle-01" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="343" cx="76" cy="76" r="72.7"/>
+                            <circle class="play-circle-02" fill="none" stroke="#fff" stroke-width="3" stroke-dasharray="309" cx="76" cy="76" r="65.5"/>
+                        </svg>
+                        <div class="play-perspective">
+                            <button class="play-close"></button>
+                            <div class="play-triangle">
+                            <div class="play-video">
+                                <video width="800" height="600" src="videos/main_video.mp4" class="howMake_video" autoplay muted></video>
+                            </div>
+                            </div>
+                        </div>
+                    </div>   
+            </div>
+
+            <div class="howMake_BGimg_01">
+                <h3 class="howMake_number">1 Wood drying and cutting operations</h3>
+                <p class="howMake_text">
+                    The warehouse holds more than 300 different <br>
+                    types of wood cut for different purposes.<br>
+                </p>
+                <div class="learnMore_bt1"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp1">
+                    <img src="images/how_02.jpg" alt="popUpIMG1">
+                    <p> The warehouse holds more than 300 different types of wood cut for different purposes.<br>
+                    After grading based on the color of the wood, it is managed for about 5 months to maintain<br>
+                    the moisture content of the wood at a certain level.<br>
+                    In summer, the wood is wetted occasionally and in winter, the wood is dried in a kiln.<br>
+                    It is a necessary process for the durability and high quality of wood.<br>
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_01">
+                
+                
+            </div>
+
+            <div class="howMake_BGimg_02">
+                <h3 class="howMake_number">2 Steam treatment</h3>
+                <p class="howMake_text">
+                    Shape the properties into a bar and place them in a water-filled <br>
+                    kiln and steam them at a temperature of 100 degrees Celsius.
+                </p>
+                <div class="learnMore_bt2"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp2">
+                    <img src="images/how_03.jpg" alt="popUpIMG2">
+                    <p> The warehouse holds more than 300 different types of wood cut for different purposes.<br>
+                    After grading based on the color of the wood, it is managed for about 5 months to maintain<br>
+                    the moisture content of the wood at a certain level.<br>
+                    In summer, the wood is wetted occasionally and in winter, the wood is dried in a kiln.<br>
+                    It is a necessary process for the durability and high quality of wood.
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_02">
+                
+                
+            </div>
+
+            <div class="howMake_BGimg_03">
+                <h3 class="howMake_number">3 Work on music (bending)</h3>
+                <p class="howMake_text">
+                    Employees put the jade bars into <br>
+                    molds and bend them to fit the shape.
+
+                </p>
+                <div class="learnMore_bt3"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp3">
+                    <img src="images/how_04.jpg" alt="popUpIMG3">
+                    <p> Employees put the jade bars into molds and bend them to fit the shape.<br>
+                        Sufficiently hydrated wood is shaped to fit the mold without damage to strong warping.<br>
+                        It looks very simple, but it's a manufacturing method that's been researched a lot of time.
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_03">
+                
+            </div>
+
+            <div class="howMake_BGimg_04">
+                <h3 class="howMake_number">4 Stain</h3>
+                <p class="howMake_text">
+                    Each piece of furniture is suspended in the air along the assembly line <br>
+                    and moved to a space where the staining takes place.
+                </p>
+                <div class="learnMore_bt4"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp4">
+                    <img src="images/how_05.jpg" alt="popUpIMG4">
+                    <p> Each piece of furniture is suspended in the air along the assembly line and moved to a space where the staining takes <br>
+                        place. If the customer prefers the natural color of the wood, dry it in the shade and finish with only varnish or oil. 
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_04">
+                
+            </div>
+
+            <div class="howMake_BGimg_05">
+                <h3 class="howMake_number">5 Assembly</h3>
+                <p class="howMake_text">
+                    For skilled workers, one Chair 14<br>
+                    can be assembled in 90 seconds.
+                </p>
+                <div class="learnMore_bt5"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp5">
+                    <img src="images/make05.PNG" alt="popUpIMG5">
+                    <p> After finishing the staining, each part is moved to the assembly line and assembled in the final <br>
+                        form by the assembly professional's touch. For skilled workers, one Chair 14 can be assembled in 90 seconds.
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_05">
+                
+            </div>
+
+            <div class="howMake_BGimg_06">
+                <h3 class="howMake_number">6 Re-paint</h3>
+                <p class="howMake_text">
+                    Finalize with a locker or oil..<br>
+                    This is done manually in a dust-free space.
+                </p>
+                <div class="learnMore_bt6"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp6">
+                    <img src="images/make06.PNG" alt="popUpIMG5">
+                    <p> Finalize with a locker or oil. This is done manually in a dust-free space. <br> 
+                        Locker work is carried out twice and sanding is carried out in between.
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_06">
+                
+            </div>
+
+            <div class="howMake_BGimg_07">
+                <h3 class="howMake_number">7 Oil finish</h3>
+                <p class="howMake_text">
+                    Okmok products are coated with oil.
+                </p>
+                <div class="learnMore_bt7"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp7">
+                    <img src="images/make07.PNG" alt="popUpIMG7">
+                    <p> Okmok products are coated with oil. <br>
+                        This action creates a layer of protective film that makes the grain of wood more prominent.
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_07">
+                
+            </div>
+
+            <div class="howMake_BGimg_08">
+                <h3 class="howMake_number">8 Product material finish</h3>
+                <p class="howMake_text">
+                    Upholstery works according to the customer's
+                </p>
+                <div class="learnMore_bt8"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp8">
+                    <img src="images/make08.PNG" alt="popUpIMG8">
+                    <p> Upholstery works according to the customer's <br>
+                        Various colors of fabric/leather can be selected and produced according to your preference.
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_08">
+                
+            </div>
+
+            <div class="howMake_BGimg_09">
+                <h3 class="howMake_number">9 test</h3>
+                <p class="howMake_text">
+                    The quality of the product is the most important thing for us.
+                </p>
+                <div class="learnMore_bt9"><span>⇁</span>  LEARN MORE</div>
+                <div class="howMake_popUp9">
+                    <img src="images/make09.PNG" alt="popUpIMG9">
+                    <p> The quality of the product is the most important thing for us. <br>
+                        All products are carefully inspected at each manufacturing stage. <br>
+                        In addition, only products that have passed the durability and stability tests <br>
+                        that comply with the European Standard EN 161397 Furniture standard are distributed.
+                    </p>
+                    <div class="howMake_popUp_closeBT">X</div>
+                </div>
+            </div>
+            <div class="howMake_09">
+                
+            </div> 
+        </article>
+
+    <!-- product -->
+        <article class="product">
+            <div class="productStart">
+                <video src="videos/01.mp4" muted autoplay loop></video>
+                <h2>OF ARTISTIC VALUE</h2>
+            </div>
+            <div class="product01">
+                <ul>
+                    <li>
+                        <img src="images/armchair811_01.jpg" alt="productIMG_01" onmouseover="this.src='images/productHover01.gif'" onmouseout="this.src='images/armchair811_01.jpg'">
+                        <p class="text">Armchair 811 - Natural/Cane</p>
+                    </li>
+                    <li>
+                        <img src="images/armchairLyon516_01.jpg" alt="productIMG_02" onmouseover="this.src='images/productHover02.gif'" onmouseout="this.src='images/armchairLyon516_01.jpg'">
+                        <p class="text">Armchair Lyon 516 - Light Natural</p>
+                    </li>
+                    <li>
+                        <img src="images/Chair18_01.jpg" alt="productIMG_03" onmouseover="this.src='images/productHover03.gif'" onmouseout="this.src='images/Chair18_01.jpg'">
+                        <p class="text">Chair 18 - Natural</p>
+                    </li>
+                    <li>
+                        <img src="images/ChairIronica_01.jpg" alt="productIMG_04" onmouseover="this.src='images/productHover04.gif'" onmouseout="this.src='images/ChairIronica_01.jpg'">
+                        <p class="text">Chair Ironica - Natural</p>
+                    </li>
+                </ul>
+            </div>
+
+
+
+            <div class="product02">
+                <h2 id="text1">Europe's representative cafe chair</h2>
+                <img src="images/artistic.gif" alt="product02IMG" class="product02IMG">
+                <p id="text2">
+                    In addition to the original collection<br>
+                    that stimulates classical sensibility,<br>
+                    the Contemporary Collection, which fea<br>
+                    tures a variety of artistic attempts to<br>
+                    express wood through collaboration with<br>
+                    modern designers, is also loved by many<br>
+                    world famous design awards.</p>
+                <div id="product02Wrap1">
+                    <ul id="slide_box01">
+                        <li><img src="images/slide01.jpg" alt="slide01"></li>
+                        <li><img src="images/slide02.png" alt="slide02"></li>
+                        <li><img src="images/slide03.PNG" alt="slide03"></li>
+                        <li><img src="images/slide04.PNG" alt="slide04"></li>
+                        
+                    </ul>
+                </div>
+                <img src="icons/prev_bt.png" alt="prev_bt" id="prev_bt">
+                <img src="icons/next_bt.png" alt="next_bt" id="next_bt">
+
+                <div id="product02Wrap2">
+                    <ul id="slide_box02">
+                        <li><img src="./images/slide001.PNG" alt="slide001"></li>
+                        <li><img src="./images/slide002.PNG" alt="slide002"></li>
+                        <li><img src="./images/slide003.PNG" alt="slide003"></li>
+                        <li><img src="./images/slide004.PNG" alt="slide004"></li>
+                
+                    </ul>
+                </div>
+            </div>
+
+            <div class="product03">
+                <div class="product03Sticky">
+                    <img src="images/color01.png" alt="product03Chair1" class="product03Chair01">
+                    <img src="images/color02.png" alt="product03Chair2" class="product03Chair02">
+                    <img src="images/color03.png" alt="product03Chair3" class="product03Chair03">
+                    <img src="images/color04.png" alt="product04Chair4" class="product03Chair04">
+                    <img src="images/color05.png" alt="product04Chair5" class="product03Chair05">
+                    <img src="images/color06.png" alt="product04Chair6" class="product03Chair06">
+                    <h2>Colorful colors that fit <br> your taste and space</h2>
+                    <!-- <img src="images/Natural.png" alt="Natural" class="Natural"> -->
+                </div>
+                <div class="transparentarea"></div>
+            </div>
+
+        </article>
+    </section>
+       
+
+
+    <!-- main4 -->
+    <section class="main4">
+        
+            <div class="designer">
+                <div class="designerImgBox">
+                    <ul>
+                        <li>
+                            <img src="images/Designers01.jpg" alt="esigners01">
+                            <p>Lucie Koldová</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers02.jpg" alt="esigners02">
+                            <p>E-ggs studio</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers03.jpg" alt="esigners03">
+                            <p>Yonoh</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers04.jpg" alt="esigners04">
+                            <p>Michael Schneider</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers05.jpg" alt="esigners05">
+                            <p>Arik Levy</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers06.jpg" alt="esigners06">
+                            <p>Sam Sannia</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers07.jpg" alt="esigners07">
+                            <p>Lime Studio</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers08.jpg" alt="esigners08">
+                            <p>Alex Gufler</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers09.jpg" alt="esigners09">
+                            <p>Eugenia Minerva</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers10.jpg" alt="esigners10">
+                            <p>Lubo Majer</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers11.jpg" alt="esigners11">
+                            <p>Guggenbichlerdesign</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers12.jpg" alt="esigners12">
+                            <p>Jan Padrnos</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers13.jpg" alt="esigners13">
+                            <p>Kai Stania</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers14.jpg" alt="esigners14">
+                            <p>Lounge Designgroup</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers15.jpg" alt="esigners15">
+                            <p>Mads K. Johansen</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers16.jpg" alt="esigners16">
+                            <p>Michal Riabic</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers17.jpg" alt="esigners17">
+                            <p>Olgoj Chorchoj</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers18.jpg" alt="esigners18">
+                            <p>René Šulc</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers19.jpg" alt="esigners19">
+                            <p>Thomas Feichtner</p>
+                        </li>
+                        <li>
+                            <img src="images/Designers20.jpg" alt="esigners20">
+                            <p>Tom Kelley</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="FixedText">
+                    <h2>Designers <br> <span>with Tun</span></h3>
+                </div>
+        
+                <div class="designers_popUp1">
+                    <div id="designer_slideWrap01">
+                        <ul id="designer_slideBox">
+                            <li><img src="images/Designers01.jpg" alt="esigners01"></li>
+                            <li><img src="images/Designers02.jpg" alt="esigners02"></li>
+                            <li><img src="images/Designers03.jpg" alt="esigners03"></li>
+                            <li><img src="images/Designers04.jpg" alt="esigners04"></li>
+                            <li><img src="images/Designers05.jpg" alt="esigners05"></li>
+                            <li><img src="images/Designers06.jpg" alt="esigners06"></li>
+                            <li><img src="images/Designers07.jpg" alt="esigners07"></li>
+                            <li><img src="images/Designers08.jpg" alt="esigners08"></li>
+                            <li><img src="images/Designers09.jpg" alt="esigners09"></li>
+                            <li><img src="images/Designers10.jpg" alt="esigners10"></li>
+                            <li><img src="images/Designers11.jpg" alt="esigners11"></li>
+                            <li><img src="images/Designers12.jpg" alt="esigners12"></li>
+                            <li><img src="images/Designers13.jpg" alt="esigners13"></li>
+                            <li><img src="images/Designers14.jpg" alt="esigners14"></li>
+                            <li><img src="images/Designers15.jpg" alt="esigners15"></li>
+                            <li><img src="images/Designers16.jpg" alt="esigners16"></li>
+                            <li><img src="images/Designers17.jpg" alt="esigners17"></li>
+                            <li><img src="images/Designers18.jpg" alt="esigners18"></li>
+                            <li><img src="images/Designers19.jpg" alt="esigners19"></li>
+                            <li><img src="images/Designers20.jpg" alt="esigners20"></li>
+                        </ul>
+                        <button id="designer_close_BT">CLOSE</button>
+                        <img src="icons/prev_bt.png" alt="prev_bt" id="designer_prev_bt">
+                        <img src="icons/next_bt.png" alt="next_bt" id="designer_next_bt">
+                    </div>
+                </div>
+            </div>
+
+
+
+
+         <!-- POLTFOLIO -->
+        <article class="projects">
+        
+            <div class="projectsSticky">
+                <video src="videos/projects.mp4" class="projectsVideo" autoplay loop muted></video>
+                <h2>PROJECTS</h2>
+            </div>
+    
+                <section id="content">
+                    <section class="images">
+                        <img data-speed="0.8" src="images/p01.PNG" alt="projectIMG01">
+                        <img data-speed="0.9" src="images/p02.png" alt="projectIMG02">
+                        <img data-speed="1" src="images/project03.jpg" alt="projectIMG03">
+                        <img data-speed="1.1" src="images/project04.jpg" alt="projectIMG04">
+                        <img data-speed="0.9" src="images/project05.jpg" alt="projectIMG05">
+                        <img data-speed="1.2" src="images/project07.jpg" alt="projectIMG06">
+                        <img data-speed="0.8" src="images/0707.PNG" alt="projectIMG07">
+                        <img data-speed="1" src="images/pp.PNG" alt="projectIMG08">
+                    </section>
+                </section>
+            
+
+            <div class="projectsTransparentarea"></div>
+
+        </article>
+
+    </section>           
+        
+    
+</div>
+
+
+
+<!-- FOOTER -->
+<footer>
+         <div class="FooterSection1">
+            <h4>Newletter</h4>
+            <input type="text" placeholder="Enter your e-mail" class="Email" onfocus="this.placeholder=''" onblur="this.placeholder='Enter your e-mail'" >
+            <div class="Enter">↵</div>
+            <ul class="snsIcons">
+                <li><a href="https://www.instagram.com/ton_chairs/" target="_blank" rel="noopener"><img src="icons/instagram_iconWhite.png" alt="FooterIcon1"></img></a></li>
+                <li><a href="https://www.facebook.com/DesignByTON" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="FooterIcon2"></img></a></li>
+                <li><a href="https://www.youtube.com/user/TONdesigncz/" target="_blank" rel="noopener"><img src="icons/youTube" alt="FooterIcon3"></img></a></li>
+            </ul>
+            <h2 class="FooterLogo"><a href="#"><img src="icons/logo_white.png" alt="FooterLogo"></a></h2>
+            
+         </div>
+         <div class="FooterSection2">
+             <video src="videos/FooterVideo.mp4" muted loop autoplay></video>
+        </div> 
+        <div class="FooterSection3">
+             <ul class="contect">
+                 <li>
+                     <h4>Contect</h4>
+                 </li>
+                 <li>
+                    <h5>Sales director assistant</h5>
+                    <p>
+                        <span>Martina Sklenářová</span> <br>
+                        e-mail: martina.sklenarova@ton.cz <br>
+                        tel.: +420 573 325 480
+                    </p>
+                </li>
+                <li>
+                    <h5>Press</h5>
+                    <p>
+                        <span>Anna Handlová</span> <br>
+                        marketing & PR manager<br>
+                        anna.handlova@ton.cz <br>
+                        +420 702 001 171 
+                    </p>
+                </li>
+             </ul>
+        </div>
+        <div class="FooterSection4">
+            <h4>Address</h4>
+            <div class="Map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2596.42474837894!2d17.660959715693675!3d49.40087277934438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4713a3fd68c567d3%3A0x64fd7c755aad85fd!2sshowroom%20TON%20Byst%C5%99ice%20pod%20Host%C3%BDnem!5e0!3m2!1sko!2skr!4v1653416913852!5m2!1sko!2skr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+             <p>
+                 <span>TON a.s.</span><br>
+                 Michaela Thoneta 148 <br>
+                 76861 Bystřice pod Hostýnem <br>
+                 VAT: CZ49970585
+                <br> <br>
+                 tel: +420 573 325 111 <br>
+                 email: info@ton.cz
+            </p>
+        </div>
+        <div class="Copyright">
+            <p>© 2022 TON a.s., Michaela Thoneta 148, 768 61 Bystřice pod Hostýnem, Czech Republic – All rights reserved</p>
+        </div>
+        
+</footer>
+
+ </body>
+</html>
